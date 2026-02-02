@@ -49,6 +49,7 @@ export default function About() {
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
     },
+    
   ];
   return (
     <Column maxWidth="m">
@@ -117,31 +118,7 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
-              <Row
-                fitWidth
-                border="brand-alpha-medium"
-                background="brand-alpha-weak"
-                radius="full"
-                padding="4"
-                gap="8"
-                marginBottom="m"
-                vertical="center"
-                className={styles.blockAlign}
-                style={{
-                  backdropFilter: "blur(var(--static-space-1))",
-                }}
-              >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
-                <IconButton
-                  href={about.calendar.link}
-                  data-border="rounded"
-                  variant="secondary"
-                  icon="chevronRight"
-                />
-              </Row>
-            )}
+            
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>
@@ -293,6 +270,61 @@ export default function About() {
               </Heading>
               <Column fillWidth gap="l">
                 {about.technical.skills.map((skill, index) => (
+                  <Column key={`${skill}-${index}`} fillWidth gap="4">
+                    <Text id={skill.title} variant="heading-strong-l">
+                      {skill.title}
+                    </Text>
+                    <Text variant="body-default-m" onBackground="neutral-weak">
+                      {skill.description}
+                    </Text>
+                    {skill.tags && skill.tags.length > 0 && (
+                      <Row wrap gap="8" paddingTop="8">
+                        {skill.tags.map((tag, tagIndex) => (
+                          <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
+                            {tag.name}
+                          </Tag>
+                        ))}
+                      </Row>
+                    )}
+                    {skill.images && skill.images.length > 0 && (
+                      <Row fillWidth paddingTop="m" gap="12" wrap>
+                        {skill.images.map((image, index) => (
+                          <Row
+                            key={index}
+                            border="neutral-medium"
+                            radius="m"
+                            minWidth={image.width}
+                            height={image.height}
+                          >
+                            <Media
+                              enlarge
+                              radius="m"
+                              sizes={image.width.toString()}
+                              alt={image.alt}
+                              src={image.src}
+                            />
+                          </Row>
+                        ))}
+                      </Row>
+                    )}
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.softskills.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.softskills.title}
+                variant="display-strong-s"
+                marginBottom="40"
+              >
+                {about.softskills.title}
+              </Heading>
+              <Column fillWidth gap="l">
+                {about.softskills.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
                     <Text id={skill.title} variant="heading-strong-l">
                       {skill.title}

@@ -1,15 +1,15 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Emmanuel",
+  lastName: "N'dia",
+  name: `Emmanuel N'dia`,
+  role: "Développeur Web",
   avatar: "/images/avatar.jpg",
   email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Côte d'Ivoire/Abidjan", 
+  languages: ["Français", "Anglais"], 
 };
 
 const newsletter: Newsletter = {
@@ -72,11 +72,11 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/recrutement-agent",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    Je suis Emmanuel N'dia, développeur Web junior, je crée des expériences utilisateur intuitives et je construis mes propres projets.
 </>
   ),
 };
@@ -102,89 +102,93 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+          Emmanuel est un développeur web, passionné par la transformation des défis complexes
+          en solutions de design simples et élégantes. Son travail couvre les interfaces numériques, les expériences
+          interactives et la convergence de la conception et de la technologie.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Expérience Professionnelle",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "CEI (Commission Electorale Indépendante)",
+        timeframe: "Janvier 2025 - Janvier 2026",
+        role: "Stagiaire Développeur Web et Maintenance Informatique",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          "Participation à la création d'applications web facilitant la gestion des différentes opérations de l'entreprise sur cette période",
+          "Contribution technique et stratégique lors des élections présidentielles et législatives",
+          "Diagnostique, résolution de pannes matérielles et logicielles, configuration et déploiement du parc informatique de l'entreprise",
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/cei.png",
+            alt: "CEI (Commission Electorale Indépendante)",
             width: 16,
             height: 9,
           },
         ],
       },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
+      
     ],
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Etudes",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Groupe CEFIAT Salomon, Abidjan - Plateau",
+        description: <>BTS en Informatique Développeur d'Applications (IDA) 2024</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Lycée Municipal de Bonoua, Bonoua",
+        description: <>Baccalauréat Série C 2022</>,
+      },
+      {
+        name: "Lycée Moderne de Cocody, Abidjan - Cocody",
+        description: <>Brevet d'Etude du Premier Cycle (BEPC) 2019</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Compétences",
     skills: [
       {
-        title: "Figma",
+        title: "Développement Web et Frameworks",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            <p>Frontend : React, Next.js, Next UI, TypeScript, Tailwind CSS</p>
+            <p>Backend : Node.js, Laravel(PHP)</p>
+            <p>Langages : JavaScript, TypeScript, PHP, Python, C</p>
+          </>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "Next.js",
+            icon: "nextjs",
           },
+          {
+            name: "React",
+            icon: "react",
+          },
+          {
+            name: "Laravel",
+            icon: "laravel",
+          },
+          {
+            name: "JavaScript",
+            icon: "javascript",
+          },
+          {
+            name: "Python",
+            icon: "python",
+          }
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
+        /* images: [
           {
             src: "/images/projects/project-01/cover-02.jpg",
             alt: "Project image",
@@ -197,37 +201,68 @@ const about: About = {
             width: 16,
             height: 9,
           },
-        ],
+        ], */
       },
       {
-        title: "Next.js",
+        title: "Données et Infrastructures",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            <p>Base de données : MySQL, PostgreSQL, Prisma ORM</p>
+            <p>Services API : REST, Server Actions, Stripe, Supabase</p>
+            <p>Outils et DevOps : Git/GitHub, Vercel, VirtualBox, Postman</p>
+            
+          </>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
           {
             name: "Supabase",
             icon: "supabase",
           },
+          {
+            name: "postgresql",
+            icon: "postgresql",
+          },
+          {
+            name: "stripe",
+            icon: "stripe",
+          },
+          {
+            name: "mysql",
+            icon: "mysql",
+          },
+          {
+            name: "Github",
+            icon: "github",
+          },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
+        /* images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
           },
-        ],
+        ], */
       },
+    ],
+  },
+  softskills: {
+    display: true, // set to false to hide this section
+    title: "",
+    skills: [
+      {
+        title: "Compétences Personnelles",
+        description: (
+          <>
+            <p>Adaptabilité</p>
+            <p>Esprit d'équipe</p>
+            <p>Esprit d'apprentissage</p>
+            <p>Relationnel</p>
+          </>
+        ),
+      },
+      
     ],
   },
 };
@@ -244,7 +279,7 @@ const blog: Blog = {
 const work: Work = {
   path: "/work",
   label: "Work",
-  title: `Projects – ${person.name}`,
+  title: `Projets – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
