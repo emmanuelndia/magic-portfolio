@@ -8,7 +8,7 @@ const person: Person = {
   role: "Développeur Web",
   avatar: "/images/avatar.jpg",
   email: "example@gmail.com",
-  location: "Côte d'Ivoire/Abidjan", 
+  location: "Africa/Abidjan", 
   languages: ["Français", "Anglais"], 
 };
 
