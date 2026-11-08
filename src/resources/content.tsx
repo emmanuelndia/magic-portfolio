@@ -131,6 +131,26 @@ const about: About = {
           },
         ],
       },
+
+      {
+        company: "HUB  SA",
+        timeframe: "Fevrier 2026 - Septembre 2026",
+        role: "Consultant Développeur Web",
+        achievements: [
+          "Création d'applications web et mobile facilitant la gestion des différentes opérations de l'entreprise sur cette période",
+          "la création de ChantierPro HUB une application PWA (Web et mobile) permettant de gérer les présences des ressources humaines sur les chantiers ou bureaux",
+          "Création de Stock HUB une application web permettant de gérer les différents stocks de l'entreprise",
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          {
+            src: "/images/hub_sa.png",
+            alt: "HUB SA",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
       
     ],
   },
@@ -138,6 +158,10 @@ const about: About = {
     display: true, // set to false to hide this section
     title: "Etudes",
     institutions: [
+      {
+        name: "Ecole Supérieur Africaine des Technologies de l'Information et de la Communication (ESATIC), Abidjan - Treichville",
+        description: <>Licence 3 en Développement d'Applications et Système d'Information (DASI) - En cours</>,
+      },
       {
         name: "Groupe CEFIAT Salomon, Abidjan - Plateau",
         description: <>BTS en Informatique Développeur d'Applications (IDA) 2024</>,
@@ -162,7 +186,7 @@ const about: About = {
           <>
             <p>Frontend : React, Next.js, Next UI, TypeScript, Tailwind CSS</p>
             <p>Backend : Node.js, Laravel(PHP)</p>
-            <p>Langages : JavaScript, TypeScript, PHP, Python, C</p>
+            <p>Langages : JavaScript, TypeScript, PHP, Python, C, C#, Kotlin</p>
           </>
         ),
         tags: [
@@ -207,9 +231,9 @@ const about: About = {
         title: "Données et Infrastructures",
         description: (
           <>
-            <p>Base de données : MySQL, PostgreSQL, Prisma ORM</p>
+            <p>Base de données : MySQL, PostgreSQL, Prisma ORM, MongoDB</p>
             <p>Services API : REST, Server Actions, Stripe, Supabase</p>
-            <p>Outils et DevOps : Git/GitHub, Vercel, VirtualBox, Postman</p>
+            <p>Outils et DevOps : Git/GitHub, Vercel, VirtualBox, Postman, Android Studio</p>
             
           </>
         ),
